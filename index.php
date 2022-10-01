@@ -44,7 +44,6 @@ $title = __("application_title") . " | " . __("sign_in");
 </head>
 <body class="hold-transition login-page">
 
-<?php require_once __DIR__ . "/includes/language-form.php"; ?>
 
 <div class="login-box">
     <div class="login-logo">

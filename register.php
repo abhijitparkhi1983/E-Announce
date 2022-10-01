@@ -33,8 +33,6 @@ $title = __("application_title") . " | " . __("register");
 </head>
 <body class="hold-transition register-page">
 
-<?php require_once __DIR__ . "/includes/language-form.php"; ?>
-
 <div class="register-box">
     <div class="register-logo">
         <img src="<?= Setting::get("logo_src"); ?>" style="width: 64px; height: 64px" alt="logo">

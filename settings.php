@@ -40,6 +40,7 @@ require_once __DIR__ . "/includes/header.php";
                             <li><a href="#tab_4" data-toggle="tab"><?= __("registration"); ?></a></li>
                             <li><a href="#tab_5" data-toggle="tab"><?= __("messages"); ?></a></li>
                             <li><a href="#tab_6" data-toggle="tab"><?= __("pusher"); ?></a></li>
+                            <li><a href="#tab_7" data-toggle="tab"><?= __("twilio_config"); ?></a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab_1">
@@ -633,6 +634,9 @@ require_once __DIR__ . "/includes/header.php";
                                            class="form-control pusher" id="pusherClusterInput"
                                            value="<?= Setting::get("pusher_cluster"); ?>" required="required">
                                 </div>
+                            </div>
+                            <div class="tab-pane" id="tab_7">
+                                
                             </div>
                         </div>
                         <!-- /.tab-content -->

@@ -21,9 +21,6 @@ if (count(get_included_files()) == 1) {
 <html>
 <head>
     <?php require_once __DIR__ . "/head.php" ?>
-    <?php if ($currentPage == "subscribe.php") { ?>
-        <link rel="stylesheet" href="css/pricing-table.css">
-    <?php } ?>
     <?php if ($currentPage == "settings.php") { ?>
         <!-- Trumbowyg -->
         <link href="components/trumbowyg/dist/ui/trumbowyg.min.css" rel="stylesheet">
@@ -57,20 +54,13 @@ if (count(get_included_files()) == 1) {
             
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="profile.php">
-                            <img src="img/avatar5.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs user-name"><?php echo htmlentities($_SESSION["name"], ENT_QUOTES); ?></span>
-                        </a>
-                    </li>
                     <!-- Notifications Dropdown Menu -->
                     <li class="dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">
                             <i class="fa fa-bell"></i>
                             <span class="badge badge-warning navbar-badge">15</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right">
+                        <!-- <div class="dropdown-menu dropdown-menu-right">
                             <span class="dropdown-header text-center">15 Notifications</span>
                             <div class="divider"></div>
                             <a href="#" class="dropdown-item">
@@ -89,7 +79,19 @@ if (count(get_included_files()) == 1) {
                             </a>
                             <div class="divider"></div>
                             <a href="#" class="dropdown-item dropdown-footer text-center">See All Notifications</a>
-                        </div>
+                        </div> -->
+                    </li>
+                    <!-- #END# Notifications -->
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="profile.php">
+                            <img src="img/avatar5.png" class="user-image" alt="User Image">
+                            <span class="hidden-xs user-name"><?php echo htmlentities($_SESSION["name"], ENT_QUOTES); ?></span>
+                        </a>
+                    </li>
+                    <!-- Sign Out Button -->
+                    <li>
+                        <a href="logout.php"><i class="fa fa-sign-out"></i></a>
                     </li>
                 </ul>
             </div>
@@ -186,14 +188,6 @@ if (count(get_included_files()) == 1) {
                     </li>
                 <?php } else { ?>
                 <?php } ?>
-                <hr>
-                <!-- Sign Out Button -->
-                <li>
-                    <a href="logout.php">
-                        <i class="fa fa-sign-out"></i>
-                        <span><?= __("logout") ?></span>
-                    </a>
-                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
