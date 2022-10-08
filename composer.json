@@ -16,7 +16,9 @@
     "guzzlehttp/guzzle": "^7.3.0",
     "google/recaptcha": "^1.2.4",
     "pusher/pusher-php-server": "^7.0",
-    "box/spout": "^3.3.0"
+    "box/spout": "^3.3.0",
+    "messente/messente-api-php": "^2.0",
+    "twilio/sdk": "^6.42"
   },
   "autoload": {
     "classmap": [

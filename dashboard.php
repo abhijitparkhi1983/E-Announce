@@ -266,48 +266,8 @@ require_once __DIR__ . "/includes/header.php";
                 </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-yellow-gradient">
-                    <div class="inner">
-                        <h3 id="pending-ussd-count"><?= $pendingUssd ?></h3>
-
-                        <p><?= __("pending_ussd_requests"); ?></p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-ios-timer"></i>
-                    </div>
-                    <a href="ussd.php"
-                       class="small-box-footer"><?= __("more_info") ?> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-green-gradient">
-                    <div class="inner">
-                        <h3 id="sent-ussd-count"><?= $sentUssd ?></h3>
-
-                        <p><?= __("sent_ussd_requests"); ?></p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-ios-done-all"></i>
-                    </div>
-                    <a href="ussd.php"
-                       class="small-box-footer"><?= __("more_info") ?> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
         </div>
         <!-- /.row -->
-
-        <?php
-        $showTutorial = isset($_SESSION["showTutorial"]);
-        if ($showTutorial) {
-            unset($_SESSION["showTutorial"]);
-            require_once __DIR__ . "/includes/add-device.php";
-        }
-        ?>
 
     </section>
     <!-- /.content -->
@@ -380,13 +340,6 @@ require_once __DIR__ . "/includes/header.php";
         $('#sent-ussd-count').text(totalSent);
     });
 </script>
-<?php } ?>
-<?php if ($showTutorial) { ?>
-    <script type="text/javascript">
-        $(function () {
-            $('#modal-add-device').modal({backdrop: 'static', keyboard: false});
-        });
-    </script>
 <?php } ?>
 <script>
     $(function () {

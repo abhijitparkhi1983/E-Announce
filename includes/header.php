@@ -115,38 +115,8 @@ if (count(get_included_files()) == 1) {
             <ul class="sidebar-menu" data-widget="tree">
                 <li <?php if ($currentPage == "dashboard.php") echo 'class="active"'; ?>>
                     <a href="dashboard.php">
-                        <i class="fa fa-dashboard"></i>
+                        <i class="fa fa-dashboard" ></i>
                         <span><?= __("dashboard") ?></span>
-                    </a>
-                </li>
-                <li <?php if ($currentPage == "profile.php") echo 'class="active"'; ?>>
-                    <a href="profile.php">
-                        <i class="fa fa-user"></i>
-                        <span><?= __("profile") ?></span>
-                    </a>
-                </li>
-                <li <?php if ($currentPage == "blacklist.php") echo 'class="active"'; ?>>
-                    <a href="blacklist.php">
-                        <i class="fa fa-ban"></i>
-                        <span><?= __("blacklist") ?></span>
-                    </a>
-                </li>
-                <li <?php if ($currentPage == "templates.php") echo 'class="active"'; ?>>
-                    <a href="templates.php">
-                        <i class="fa fa-sticky-note"></i>
-                        <span><?= __("templates") ?></span>
-                    </a>
-                </li>
-                <li <?php if ($currentPage == "contacts.php") echo 'class="active"'; ?>>
-                    <a href="contacts.php">
-                        <i class="fa fa-address-card"></i>
-                        <span><?= __("contacts") ?></span>
-                    </a>
-                </li>
-                <li <?php if ($currentPage == "messages.php") echo 'class="active"'; ?>>
-                    <a href="messages.php">
-                        <i class="fa fa-envelope"></i>
-                        <span><?= __("messages") ?></span>
                     </a>
                 </li>
                 <li <?php if ($currentPage == "sender.php") echo 'class="active"'; ?>>
@@ -155,10 +125,28 @@ if (count(get_included_files()) == 1) {
                         <span><?= __("sender") ?></span>
                     </a>
                 </li>
-                <li <?php if ($currentPage == "ussd.php") echo 'class="active"'; ?>>
-                    <a href="ussd.php">
-                        <i class="fa fa-phone"></i>
-                        <span><?= __("ussd"); ?></span>
+                <li <?php if ($currentPage == "templates.php") echo 'class="active"'; ?>>
+                    <a href="templates.php">
+                        <i class="fa fa-sticky-note"></i>
+                        <span><?= __("templates") ?></span>
+                    </a>
+                </li>
+                <li <?php if ($currentPage == "messages.php") echo 'class="active"'; ?>>
+                    <a href="messages.php">
+                        <i class="fa fa-envelope"></i>
+                        <span><?= __("messages") ?></span>
+                    </a>
+                </li>
+                <li <?php if ($currentPage == "contacts.php") echo 'class="active"'; ?>>
+                    <a href="contacts.php">
+                        <i class="fa fa-address-card"></i>
+                        <span><?= __("contacts") ?></span>
+                    </a>
+                </li>
+                <li <?php if ($currentPage == "blacklist.php") echo 'class="active"'; ?>>
+                    <a href="blacklist.php">
+                        <i class="fa fa-ban"></i>
+                        <span><?= __("blacklist") ?></span>
                     </a>
                 </li>
                 <li <?php if ($currentPage == "auto-responder.php") echo 'class="active"'; ?>>

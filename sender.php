@@ -35,24 +35,6 @@ require_once __DIR__ . "/includes/header.php";
                           enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="devicesInput"><?= __("devices"); ?>
-                                    <a href="#sendMessage" class="selectAllDevices" data-target="#devicesInput">
-                                        <i class="fa fa-plus-square"></i>
-                                    </a>
-                                    <a href="#sendMessage" class="clearAllDevices" data-target="#devicesInput">
-                                        <i class="fa fa-minus-square"></i>
-                                    </a>
-                                </label>
-                                <select class="form-control select2" id="devicesInput" name="devices[]"
-                                        multiple="multiple"
-                                        style="width: 100%;">
-                                    <?php
-                                    $selectedDevice = $logged_in_user->getPrimaryDeviceID();
-                                    $logged_in_user->generateDeviceSimsList([$selectedDevice]);
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
                                 <label for="mobileNumberInput"><?= __("mobile_numbers"); ?></label>
                                 <input type="text" class="form-control" name="mobileNumber" id="mobileNumberInput"
                                        placeholder="<?= __("mobile_numbers_placeholder"); ?>"
@@ -149,24 +131,6 @@ require_once __DIR__ . "/includes/header.php";
                     <form id="sendMessages" role="form" action="ajax/excel-upload.php" method="post"
                           enctype="multipart/form-data">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label for="devicesMultipleInput"><?= __("devices"); ?>
-                                    <a href="#sendMessages" class="selectAllDevices"
-                                       data-target="#devicesMultipleInput">
-                                        <i class="fa fa-plus-square"></i>
-                                    </a>
-                                    <a href="#sendMessages" class="clearAllDevices" data-target="#devicesMultipleInput">
-                                        <i class="fa fa-minus-square"></i>
-                                    </a>
-                                </label>
-                                <select class="form-control select2" id="devicesMultipleInput" name="devices[]"
-                                        multiple="multiple"
-                                        style="width: 100%;">
-                                    <?php
-                                    $logged_in_user->generateDeviceSimsList([$selectedDevice]);
-                                    ?>
-                                </select>
-                            </div>
                             <div class="form-group">
                                 <label for="scheduleMultipleInput"><input type="checkbox" id="toggleScheduleMultiple"
                                                                           onchange="disableInput('#toggleScheduleMultiple', '#scheduleMultipleInput')"> <?= __("schedule"); ?>
